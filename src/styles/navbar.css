@@ -1,0 +1,17 @@
+.navbar{
+    background-color: rgba(0, 0, 0, 0.628);
+    position: fixed;
+    width: 100%;
+    padding: 5px;
+}
+.sections{
+    list-style: none;
+    text-align: right;
+    justify-content: right;
+}
+.linksNames{
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    
+}
