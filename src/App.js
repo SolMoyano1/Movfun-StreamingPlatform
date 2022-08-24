@@ -16,7 +16,11 @@ function App() {
         <Routes>
           <Route path='/' element={<Login/>}/>
           <Route path='/Home' element={<Home/>}/>
-          <Route path='/Category' element={<ContentCategory/>}/>
+          <Route path='/ComedyMovies' element={<ContentCategory/>}/>
+          <Route path='/RomanceMovies' element={<ContentCategory/>}/>
+          <Route path='/DramaMovies' element={<ContentCategory/>}/>
+          <Route path='/ThrillerMovies' element={<ContentCategory/>}/>
+          <Route path='/ActionMovies' element={<ContentCategory/>}/>
           <Route path='/Details' element={<ContentDetails/>}/>
         </Routes>
       </BrowserRouter>

@@ -23,7 +23,7 @@ function Login(){
         }
 
         else{            
-            const urlApi= 'http://localhost:4010/usuarios';
+            const urlApi= 'http://localhost:4010/users';
             
             axios.get(urlApi, {params:{email: emailValue, password:passwordValue}})
                 .then(resolve =>{

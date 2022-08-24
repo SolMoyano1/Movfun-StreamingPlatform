@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 import '../styles/home.css';
 import Navbar from './Navbar';
+
+import { Navigate, Link } from "react-router-dom";
+import axios from 'axios';
+
 function Home(){
 
-    useEffect( ()=>{
-        const urlApi='https://api.themoviedb.org/3/genre/movie/list?api_key=3cbf294e793f0a6ca68822022122050f&language=en-US'
-    })
+
     return(
         <div>
 
@@ -14,23 +16,23 @@ function Home(){
             <div className='homeDiv'>
 
                 <section>
-                    Comedy
+                <Link to={'/ComedyMovies'} > Comedy </Link> 
                 </section>
                 
                 <section>
-                    Drama
+                    <Link to={'/RomanceMovies'} > Romance </Link> 
                 </section>
                 
                 <section>
-                    Action
+                    <Link to={'/DramaMovies'}>Drama</Link>
                 </section>
                 
                 <section>
-                    Romance
+                    <Link to={'/ThrillerMovies'}>Thriller</Link>
                 </section>
 
                 <section>
-                    Thriller
+                    <Link to={'/ActionMovies'}>Action</Link>
                 </section>
 
             </div>
