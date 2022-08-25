@@ -1,0 +1,61 @@
+
+/* SMALL */
+@media (min-width:0px) and (max-width:600.99px){
+    .mainDiv{
+        background:linear-gradient(black, rgb(27, 27, 27));
+        min-height: 100vh;
+    }
+    .titleError{
+        color: white;
+        text-align: center;
+        padding-top: 80px;
+        margin: 0px;
+    }
+    .pError{
+        color: white;
+        text-align: center;
+        padding-top: 30px;
+    }
+}
+
+/* MEDIUM */
+@media (min-width:601px) and (max-width:1007.99px){
+    .mainDiv{
+        background:linear-gradient(black, rgb(27, 27, 27));
+        min-height: 100vh;
+    }
+    .titleError{
+        color: white;
+        text-align: center;
+        padding-top: 100px;
+        margin: 0px;
+        font-size: 40px;
+    }
+    .pError{
+        color: white;
+        text-align: center;
+        padding-top: 30px;
+        font-size: 20px;
+    }
+}
+
+/* LARGE */
+@media (min-width:1008px) and (max-width:2500px){
+    .mainDiv{
+        background:linear-gradient(black, rgb(27, 27, 27));
+        min-height: 100vh;
+    }
+    .titleError{
+        color: white;
+        text-align: center;
+        padding-top: 100px;
+        margin: 0px;
+        font-size: 50px;
+    }
+    .pError{
+        color: white;
+        text-align: center;
+        padding-top: 30px;
+        font-size: 20px;
+    }
+}

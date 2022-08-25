@@ -4,9 +4,17 @@ Movfun es una aplicacion creada con React JS que simula una plataforma de stream
 
 ## Descripción de la aplicación
 
-Para utilizar esta aplicación es necesario ingresar a la misma completando el formulario de Login con el mail y la contraseña (que deben coincidir con alguno de los registrados en la API). 
+Para utilizar esta aplicación es necesario ingresar a la misma completando el formulario de Login con el mail y la contraseña (que deben coincidir con alguno de los registrados en la API). **
 Luego, se tendrá acceso a la "Home", donde se podrá elegir un género de películas, para luego acceder a un listado de películas del género seleccionado. Al hacer click en alguna de las películas de la lista, se accederá a una página que mostrará el detalle de dicha película.
 Por último, el usuario podrá cerrar su sesión haciendo click en la sección "LogOut" que se encuentra en el Navbar.
+
+** NOTA:
+A continuación dejo los datos de un "usuario registrado" para poder ingresar y utilizar la aplicacion:
+
+- email: marcos@gmail.com
+- password: 1313
+
+Se pueden ver los demás usuarios en: https://github.com/SolMoyano1/APIusuarios
 
 ### Estructura de la aplicacción
 
