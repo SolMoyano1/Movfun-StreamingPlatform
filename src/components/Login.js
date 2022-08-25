@@ -1,6 +1,10 @@
 import '../styles/login.css';
-import axios from 'axios';
+import Navbar from './Navbar';
 import { Navigate, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { SiMaildotru } from 'react-icons/si';
+import { AiFillLock } from 'react-icons/ai';
+
 
 function Login(){
 
@@ -13,15 +17,15 @@ function Login(){
         const passwordValue= e.target.password.value;
         const verifyEmail= /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
        
-        //check that the fields are filled
+        //check if the fields are filled
         if(emailValue === '' || passwordValue === ''){
             alert('You must fill all the fields');
         }
-        //verify Email
+        //verify email
         else if(emailValue !== '' && !verifyEmail.test(emailValue)){
             alert('You must enter a valid email');
         }
-
+        // get API data to check if the user is registered
         else{            
             const urlApi= 'http://localhost:4010/users';
             
@@ -33,7 +37,7 @@ function Login(){
                 .then( resolve=>{
                     if(resolve.length > 0){
                         const userToken= resolve[0].token;
-                        console.log(userToken);
+                        console.log('token saved:' + userToken);
                         sessionStorage.setItem('userToken', userToken)
                         alert(`Welcome, ${resolve[0].name}`);
                         navigate('/Home');
@@ -50,25 +54,34 @@ function Login(){
         }
 
     }
-
+    // check if token is saved. If it is, redirect the user to the Home
     let tokenIsInStorage = sessionStorage.getItem('userToken');
-    console.log(tokenIsInStorage)
-
 
     return(
-        <div>
+        <div className='mainDiv'>
             {tokenIsInStorage && <Navigate to='/Home'/>}
-
-            <form onSubmit={handleSubmit}>
-
-                <label>Email:</label><br/>
-                <input type='text' name='email' placeholder='Username' className='loginInputs'/><br/>
+            
+            <Navbar/>
+            <div className='loginDivContainer'>
                 
-                <label>Password:</label><br/>
-                <input type='password' name='password' placeholder='Password' className='loginInputs'/><br/>
+                <h1 className='loginTitle'>Log in to watch your favorite movies!</h1>
                 
-                <button type='submit' className='loginBtn'>LogIn</button>
-            </form>
+                <form onSubmit={handleSubmit} className='formLogin'>
+
+                    <label>
+                        <SiMaildotru className='atSignSimbol'/>
+                        <input type='text' name='email' placeholder='  Email' className='loginInputs'/><br/>
+                    </label><br/>
+                    
+                    <label>
+                        <AiFillLock className='atSignSimbol'/>
+                        <input type='password' name='password' placeholder='  Password' className='loginInputs'/><br/>
+                    </label><br/>
+                    
+                    <button type='submit' className='loginBtn'>LogIn</button>
+                </form>
+            </div>
+            
         </div>
         
     )

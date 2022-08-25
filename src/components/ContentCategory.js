@@ -1,18 +1,23 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Navbar from './Navbar';
 import '../styles/contentCategory.css'
+import { Link, Navigate } from 'react-router-dom';
+import { RiInformationFill } from 'react-icons/ri';
+
+
 
 function ContentCategory(){
 
-    const [moviesArray, setMoviesArray] = useState([])
+    const [moviesArray, setMoviesArray] = useState([]);
+
     let currentUrl=window.location.href;
-    console.log(currentUrl);
 
-
+    //get the API data according to the url
     useEffect(()=>{
-        const urlApiComedia= 'http://localhost:4020/movies';
+        const urlApi= 'http://localhost:4020/movies';
 
-        axios.get(urlApiComedia)
+        axios.get(urlApi)
             .then(resolve=>{
                 if(currentUrl === 'http://localhost:3060/ComedyMovies'){
                     setMoviesArray(resolve.data[0].comedy);
@@ -25,6 +30,7 @@ function ContentCategory(){
                 }
                 else if(currentUrl === 'http://localhost:3060/DramaMovies'){
                     setMoviesArray(resolve.data[0].drama);
+                    <p>Drama</p>
                 }
                 else{
                     setMoviesArray(resolve.data[0].action);
@@ -32,31 +38,41 @@ function ContentCategory(){
             })
             
             .catch(error =>{
-                console.log('Error: ' + error)
+                console.log('Error: ' + error);
+                alert('We are having trouble loading the page.');
             });
     },[setMoviesArray]);
 
     console.log(moviesArray);
-    
 
+    // check if token is saved to protect the routes. If it is not, redirect the user to the Login
+    let tokenIsInStorage = sessionStorage.getItem('userToken')
+    
     return(
-        <div className='contentCategoryDiv'>
-           <div className='contentCategoryGrid'>
-                {
+        <div className='mainDiv'>
+            {!tokenIsInStorage && <Navigate to='/'/>}
+
+            <Navbar/>
+
+            <div className='contentCategoryDivContainer'>
                 
-                    moviesArray.map( (eachMovie, key) =>{
-                        return(
-                            <div className='moviesContainer' key={key}> 
-                                <img src={`https://image.tmdb.org/t/p/w500/${eachMovie.poster_path}`} className='moviesPosters'/>
-                            </div>
-                        )
-                    })
-                }
-                
-            </div> 
+                <div className='contentCategoryGrid'>
+
+                    {
+                        moviesArray.map( (eachMovie, key) =>{
+                            return(
+                                <div className='moviesContainer' key={key}> 
+                                    <Link to={`/Details?id=${eachMovie.id}`}>
+                                        <img src={`https://image.tmdb.org/t/p/w500/${eachMovie.poster_path}`} alt='Movie Poster' className='moviesPosters'/>         
+                                    </Link>
+                                </div>
+                            )
+                        })
+                    }
+                        
+                </div> 
+            </div>
         </div>
-        
     )
 }
-
 export default ContentCategory;

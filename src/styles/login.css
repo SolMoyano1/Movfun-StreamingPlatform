@@ -1,6 +1,199 @@
-.loginInputs{
+/* LOGIN STYLES */
+
+/* SMALL */
+@media (min-width:0px) and (max-width:600.99px){
     
+    .mainDiv{
+        background:linear-gradient(black, rgb(27, 27, 27));
+        min-height: 100vh;
+    }
+    
+    .loginDivContainer{
+        padding: 60px 10px;
+    }
+
+    .loginTitle{
+        color: white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 26px;
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .formLogin{
+        background: linear-gradient(rgb(31, 31, 31), rgba(80, 80, 80, 0.944));
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 40px 10px 30px 10px;
+    }
+
+    .atSignSimbol{
+        color: white;
+        padding-right: 8px;
+        margin-bottom: -3px;
+    }
+
+    .loginInputs{
+        background-color: rgb(205, 205, 205);
+        width: 80%;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 15px;
+        height: 30px;
+    }
+    
+    .loginBtn{
+        background: linear-gradient(rgb(235, 175, 91), rgb(151, 91, 8));
+        color: black;
+        font-weight: bolder;
+        -webkit-text-stroke: 0.3px black;     
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        letter-spacing: 1.3px;
+        width: 60%;
+        border-radius: 10px;
+        border: none;
+        height: 31px;
+        margin:-10px 0px 0px 20px;
+        cursor: pointer;
+    }
+    .loginBtn:hover{
+        font-size: 15px;
+        height: 33.5px;
+        background: linear-gradient(rgb(235, 175, 91), rgb(170, 102, 8));
+        
+    }
 }
-.loginBtn{
+
+/* MEDIUM */
+@media (min-width:601px) and (max-width:1007.99px){
+    .mainDiv{
+        background:linear-gradient(black, rgb(27, 27, 27));
+        min-height: 100vh;
+    }
     
+    .loginDivContainer{
+        padding: 60px 10px;
+    }
+
+    .loginTitle{
+        color: white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 26px;
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .formLogin{
+        background: linear-gradient(rgb(31, 31, 31), rgba(80, 80, 80, 0.944));
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 50px 10px 40px 10px;
+        margin: 0px 15%;
+    }
+
+    .atSignSimbol{
+        color: white;
+        padding-right: 8px;
+        margin-bottom: -3px;
+    }
+
+    .loginInputs{
+        background-color: rgb(205, 205, 205);
+        width: 80%;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 20px;
+        height: 40px;
+    }
+
+    .loginBtn{
+        background: linear-gradient(rgb(235, 175, 91), rgb(151, 91, 8));
+        color: black;
+        font-weight: bolder;
+        -webkit-text-stroke: 0.3px black;     
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        letter-spacing: 1.3px;
+        width: 60%;
+        border-radius: 10px;
+        border: none;
+        height: 41px;
+        margin:-10px 0px 0px 20px;
+        cursor: pointer;
+    }
+    .loginBtn:hover{
+        font-size: 16px;
+        height: 43.5px;
+        background: linear-gradient(rgb(235, 175, 91), rgb(170, 102, 8));
+        
+    }
+}
+
+/* LARGE */
+@media (min-width:1008px) and (max-width:2500px){
+    .mainDiv{
+        background:linear-gradient(black, rgb(27, 27, 27));
+        min-height: 100vh;
+    }
+    
+    .loginDivContainer{
+        padding: 60px 10px;
+    }
+
+    .loginTitle{
+        color: white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 32px;
+        text-align: center;
+        margin: 60px 0 70px 0;
+    }
+
+    .formLogin{
+        background: linear-gradient(rgb(31, 31, 31), rgba(80, 80, 80, 0.944));
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 65px 10px 50px 10px;
+        margin: 0px 25%;
+    }
+
+    .atSignSimbol{
+        color: white;
+        padding-right: 8px;
+        margin-bottom: -3px;
+    }
+
+    .loginInputs{
+        background-color: rgb(205, 205, 205);
+        width: 80%;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 20px;
+        height: 40px;
+    }
+
+    .loginBtn{
+        background: linear-gradient(rgb(235, 175, 91), rgb(151, 91, 8));
+        color: black;
+        font-weight: bolder;
+        -webkit-text-stroke: 0.3px black;     
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        letter-spacing: 1.3px;
+        width: 60%;
+        border-radius: 10px;
+        border: none;
+        height: 44px;
+        margin:-10px 0px 0px 20px;
+        cursor: pointer;
+    }
+    .loginBtn:hover{
+        font-size: 17px;
+        height: 45.5px;
+        background: linear-gradient(rgb(235, 175, 91), rgb(170, 102, 8));
+        
+    }
 }
