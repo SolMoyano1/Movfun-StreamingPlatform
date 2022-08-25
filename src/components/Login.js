@@ -5,11 +5,11 @@ import axios from 'axios';
 import { SiMaildotru } from 'react-icons/si';
 import { AiFillLock } from 'react-icons/ai';
 
-
 function Login(){
 
     const navigate= useNavigate();
 
+    // manage and check the data sent from the login
     const handleSubmit = (e) =>{
        
         e.preventDefault();
@@ -17,15 +17,15 @@ function Login(){
         const passwordValue= e.target.password.value;
         const verifyEmail= /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
        
-        //check if the fields are filled
+        // check if the fields are filled
         if(emailValue === '' || passwordValue === ''){
             alert('You must fill all the fields');
         }
-        //verify email
+        // verify email
         else if(emailValue !== '' && !verifyEmail.test(emailValue)){
             alert('You must enter a valid email');
         }
-        // get API data to check if the user is registered
+        // get data from the API to check if the user is registered
         else{            
             const urlApi= 'http://localhost:4010/users';
             
@@ -38,20 +38,19 @@ function Login(){
                     if(resolve.length > 0){
                         const userToken= resolve[0].token;
                         console.log('token saved:' + userToken);
-                        sessionStorage.setItem('userToken', userToken)
+                        sessionStorage.setItem('userToken', userToken);
                         alert(`Welcome, ${resolve[0].name}`);
                         navigate('/Home');
                     }
-                    
                     else{
                         alert('Unregistered email or wrong password');
-                    }
+                    };
                 })
-
                 .catch(error =>{
                     console.log('Error: ' + error);
-                })
-        }
+                    alert('We are having problems. Come back later.');
+                });
+        };
 
     }
     // check if token is saved. If it is, redirect the user to the Home
@@ -59,20 +58,21 @@ function Login(){
 
     return(
         <div className='mainDiv'>
+
             {tokenIsInStorage && <Navigate to='/Home'/>}
             
-            <Navbar/>
+            <p className='movfunLogin'>Movfun</p>
+
             <div className='loginDivContainer'>
                 
                 <h1 className='loginTitle'>Log in to watch your favorite movies!</h1>
                 
                 <form onSubmit={handleSubmit} className='formLogin'>
-
                     <label>
                         <SiMaildotru className='atSignSimbol'/>
                         <input type='text' name='email' placeholder='  Email' className='loginInputs'/><br/>
                     </label><br/>
-                    
+
                     <label>
                         <AiFillLock className='atSignSimbol'/>
                         <input type='password' name='password' placeholder='  Password' className='loginInputs'/><br/>
@@ -81,11 +81,8 @@ function Login(){
                     <button type='submit' className='loginBtn'>Log In</button>
                 </form>
             </div>
-            
         </div>
-        
-    )
-}
-
+    );
+};
 export default Login;
 

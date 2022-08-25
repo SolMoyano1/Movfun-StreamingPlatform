@@ -7,7 +7,7 @@
         z-index: 999;
         width: 100%;
         background-color: rgb(241, 178, 90);
-        height: 50px;
+        height: 55px;
         margin-top: -5px;
     }
     
@@ -24,11 +24,12 @@
         margin-top: -5px;
         margin-bottom: -3.5px;
         margin-left: 8px;
-
     }
+
     .sections{
         list-style: none;
     }
+    
     .linksNames{
         color: rgb(0, 0, 0);
         text-decoration: none;
@@ -36,6 +37,7 @@
         font-size: 14px;
         -webkit-text-stroke: 0.3px black; 
     }  
+    
     .linksNames:hover{
         text-decoration: underline;
         font-size: 14.3px; 
@@ -49,7 +51,7 @@
         z-index: 999;
         width: 100%;
         background-color: rgb(241, 178, 90);
-        height: 50px;
+        height: 55px;
         margin-top: -5px;
     }
     
@@ -66,11 +68,12 @@
         margin-top: -5px;
         margin-bottom: -3.5px;
         margin-left: 8px;
-
     }
+
     .sections{
         list-style: none;
     }
+    
     .linksNames{
         color: rgb(0, 0, 0);
         text-decoration: none;
@@ -78,6 +81,7 @@
         font-size: 16px;
         -webkit-text-stroke: 0.3px black; 
     }
+
     .linksNames:hover{
         text-decoration: underline;
         font-size: 16.3px; 
@@ -91,7 +95,7 @@
         z-index: 999;
         width: 100%;
         background-color: rgb(241, 178, 90);
-        height: 50px;
+        height: 55px;
         margin-top: -5px;
     }
     
@@ -108,17 +112,19 @@
         margin-top: -5px;
         margin-bottom: -3.5px;
         margin-left: 20px;
-
     }
+    
     .sections{
         list-style: none;
     }
+ 
     .linksNames{
         color: rgb(0, 0, 0);
         text-decoration: none;
         font-size: 16px;
         -webkit-text-stroke: 0.3px black;
     }
+ 
     .linksNames:hover{
         text-decoration: underline;
         font-size: 16.3px; 

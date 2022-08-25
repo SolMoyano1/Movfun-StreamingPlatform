@@ -2,6 +2,7 @@
 
 /* SMALL */
 @media (min-width:0px) and (max-width:600.99px){
+    
     .mainDiv{
         background:linear-gradient(black, rgb(27, 27, 27));
         min-height: 100vh;
@@ -35,6 +36,7 @@
         cursor: pointer;
         margin: 15px 0px;
     }
+    
     .logOutBtn:hover{
         font-size: 15px;
         height: 44.5px;
@@ -77,6 +79,7 @@
         cursor: pointer;
         margin: 0px 10px;
     }
+
     .logOutBtn:hover{
         font-size: 16.5px;
         height: 51.5px;

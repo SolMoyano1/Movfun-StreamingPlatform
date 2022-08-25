@@ -8,9 +8,17 @@ function ContentDetails(){
 
     const [detail, setDetail]= useState('');
 
-    //get the ID from the url
+    // button 'See more/Less' state
+    const [btnOn, setBtnOn] = useState(true);
+
+    // change button state
+    const btnClicked = ()=>{
+        setBtnOn(!btnOn);
+    };
+
+    //get the ID value from the query string
     const getQueryString = new URLSearchParams(window.location.search);
-    const getId = getQueryString.get('id')
+    const getId = getQueryString.get('id');
     
     //get API data
     useEffect(()=>{
@@ -20,23 +28,15 @@ function ContentDetails(){
             .then(resolve =>{
                 setDetail(resolve.data[0]);             
             })
-
             .catch( error =>{
                 console.log('Error:'+ error);
                 alert('We are having trouble loading the page.');
-            })
+            });
 
-    },[getId])
+    },[getId]);
     
-    // check if token is saved to protect the routes. If it is not, redirect the user to the Login
+    // check if token is saved to protect the route. If it is not, redirect the user to the Login
     let tokenIsInStorage= sessionStorage.getItem('userToken');
-
-    //button 'See more/Less' state
-    const [btnOn, setBtnOn] = useState(true);
-
-    const btnClicked = ()=>{
-        setBtnOn(!btnOn)
-    };
 
     return(
         <div className='mainDiv'>
@@ -48,8 +48,7 @@ function ContentDetails(){
             <div className='contentDetailsDivContainer'>
 
                 <img src={`https://image.tmdb.org/t/p/w500/${detail.poster_path}`} alt='Movie Poster' className='moviePoster'/>
-                
-                
+                      
                 <div className="divMovieData">
                     
                     <h1 className="movieName">{detail.title}</h1> 
@@ -79,13 +78,9 @@ function ContentDetails(){
                         <p className="movieInfo">{detail.vote_average}</p>
 
                     </aside>
-
-
                 </div>
-            </div>
-             
+            </div>   
         </div>
-    )
-}
-
+    );
+};
 export default ContentDetails;

@@ -1,4 +1,3 @@
-import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 //components
@@ -9,11 +8,9 @@ import ContentDetails from './components/ContentDetails';
 import Logout from './components/Logout';
 import NotFound from './components/NotFound';
 
-
 function App() {
   return (
-    <div className="App">
-      
+    <div>  
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login/>}/>
@@ -26,12 +23,9 @@ function App() {
           <Route path='/Details' element={<ContentDetails/>}/>
           <Route path='/Logout' element={<Logout/>}/>
           <Route path='/*' element={<NotFound/>}/>
-
         </Routes>
-      </BrowserRouter>
-      
+      </BrowserRouter>  
     </div>
   );
-}
-
+};
 export default App;

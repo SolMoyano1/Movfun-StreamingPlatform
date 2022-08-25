@@ -7,6 +7,17 @@
         background:linear-gradient(black, rgb(27, 27, 27));
         min-height: 100vh;
     }
+
+    .movfunLogin{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 24px;
+        letter-spacing: 4px;
+        margin-top: 0px;
+        padding: 10px;
+        background-color: rgb(241, 178, 90);
+        height: 30px;
+        font-weight: bold;
+    }
     
     .loginDivContainer{
         padding: 60px 10px;
@@ -58,6 +69,7 @@
         margin:-10px 0px 0px 20px;
         cursor: pointer;
     }
+
     .loginBtn:hover{
         font-size: 15px;
         height: 33.5px;
@@ -73,6 +85,17 @@
         min-height: 100vh;
     }
     
+    .movfunLogin{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 26px;
+        letter-spacing: 4px;
+        margin-top: 0px;
+        padding: 10px 0px 10px 18px;
+        background-color: rgb(241, 178, 90);
+        height: 30px;
+        font-weight: bold;
+    }
+
     .loginDivContainer{
         padding: 60px 10px;
     }
@@ -124,6 +147,7 @@
         margin:-10px 0px 0px 20px;
         cursor: pointer;
     }
+    
     .loginBtn:hover{
         font-size: 16px;
         height: 43.5px;
@@ -138,6 +162,17 @@
         background:linear-gradient(black, rgb(27, 27, 27));
         min-height: 100vh;
     }
+
+    .movfunLogin{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 29px;
+        letter-spacing: 4px;
+        margin-top: 0px;
+        padding: 10px 0px 10px 30px;
+        background-color: rgb(241, 178, 90);
+        height: 30px;
+        font-weight: bold;
+    }
     
     .loginDivContainer{
         padding: 60px 10px;
@@ -148,7 +183,7 @@
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 32px;
         text-align: center;
-        margin: 60px 0 70px 0;
+        margin: 30px 0 70px 0;
     }
 
     .formLogin{
@@ -190,6 +225,7 @@
         margin:-10px 0px 0px 20px;
         cursor: pointer;
     }
+    
     .loginBtn:hover{
         font-size: 17px;
         height: 45.5px;

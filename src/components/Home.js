@@ -4,6 +4,7 @@ import { Navigate, Link } from "react-router-dom";
 
 function Home(){
 
+    // check if token is saved to protect the route. If it is not, redirect the user to the Login
     let tokenIsInStorage= sessionStorage.getItem('userToken');
 
     return(
@@ -53,27 +54,7 @@ function Home(){
                 </Link>
 
             </div>
-            
-            
         </div>
-    )
-    /*
-    <section className='homeSections'>
-                    <Link to={'/RomanceMovies'} className='homeLinksNames'> Romance </Link> 
-                </section>
-                
-                <section className='homeSections'>
-                    <Link to={'/DramaMovies'} className='homeLinksNames'>Drama</Link>
-                </section>
-                
-                <section className='homeSections'>
-                    <Link to={'/ThrillerMovies'} className='homeLinksNames'>Thriller</Link>
-                </section>
-
-                <section className='homeSections'>
-                    <Link to={'/ActionMovies'} className='homeLinksNames'>Action</Link>
-                </section>
-    */
-}
-
+    );
+};
 export default Home;

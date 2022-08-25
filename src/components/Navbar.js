@@ -12,9 +12,7 @@ function Navbar(){
                     <li className='sections'><Link to='/Logout' className='linksNames'>LogOut</Link></li>                   
                 </ul>
             </nav>
-
         </header>
-    )
-}
-
+    );
+};
 export default Navbar;

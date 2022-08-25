@@ -6,14 +6,18 @@ function Logout(){
 
     let navigate= useNavigate();
 
+    // clear session storage and redirect user to the Login
     const userLoggedOut = ()=>{
         sessionStorage.removeItem('userToken');
         navigate('/');
-    }
-    const userWentBack = ()=>{
-        navigate('/Home')
-    }
+    };
 
+    // redirect user to the Home section
+    const userWentBack = ()=>{
+        navigate('/Home');
+    };
+
+    // check if token is saved to protect the route. If it is not, redirect the user to the Login
     let tokenIsInStorage = sessionStorage.getItem('userToken');
 
     return(
@@ -23,17 +27,15 @@ function Logout(){
             
             <Navbar/>
 
-            <div className='logOutDivContainer'>
-                
+            <div className='logOutDivContainer'>   
                 <h1 className='logOutTitle'>Are you sure you want to log out?</h1>
 
                 <button onClick={userLoggedOut} type='submit' className='logOutBtn'>Yes, log out</button>
 
-                <button onClick={userWentBack} type='submit' className='logOutBtn'>No, go back</button>
-                
+                <button onClick={userWentBack} type='submit' className='logOutBtn'>No, go back</button>         
             </div>
             
         </div>
-    )
-}
+    );
+};
 export default Logout;

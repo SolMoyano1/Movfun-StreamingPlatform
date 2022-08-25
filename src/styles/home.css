@@ -63,7 +63,6 @@
         transform: translate(-50%, -50%);
         text-shadow: 2px 3px 2px rgba(8, 8, 8, 0.661), 3px 2px 2px rgba(0, 0, 0, 0.719);    
     }
-    
 }
 
 /* MEDIUM */
@@ -72,6 +71,7 @@
         background:linear-gradient(black, rgb(27, 27, 27));
         min-height: 100vh;
     }
+
     .homeTitle{
         padding: 100px 10px 20px 10px;
         color: white;
@@ -97,6 +97,7 @@
     .lastLink{
         margin-left: 50%;
     }
+    
     .homeLinks{
         width: 100%;
         overflow: hidden;

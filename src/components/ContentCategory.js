@@ -4,15 +4,14 @@ import { useEffect, useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import axios from 'axios';
 
-
-
 function ContentCategory(){
 
     const [moviesArray, setMoviesArray] = useState([]);
 
-    let currentUrl=window.location.href;
+    //get the url
+    let currentUrl= window.location.href;
 
-    //get the API data according to the url
+    //get API data according to the url
     useEffect(()=>{
         const urlApi= 'http://localhost:4020/movies';
 
@@ -30,8 +29,11 @@ function ContentCategory(){
                 else if(currentUrl === 'http://localhost:3060/DramaMovies'){
                     setMoviesArray(resolve.data[0].drama);
                 }
-                else{
+                else if(currentUrl === 'http://localhost:3060/ActionMovies'){
                     setMoviesArray(resolve.data[0].action);
+                }
+                else{
+                    console.log('Page not found');
                 }
             })
             
@@ -41,10 +43,8 @@ function ContentCategory(){
             });
     },[setMoviesArray]);
 
-    console.log(moviesArray);
-
-    // check if token is saved to protect the routes. If it is not, redirect the user to the Login
-    let tokenIsInStorage = sessionStorage.getItem('userToken')
+    // check if token is saved to protect the route. If it is not, redirect user to the Login
+    let tokenIsInStorage = sessionStorage.getItem('userToken');
     
     return(
         <div className='mainDiv'>
@@ -64,13 +64,13 @@ function ContentCategory(){
                                         <img src={`https://image.tmdb.org/t/p/w500/${eachMovie.poster_path}`} alt='Movie Poster' className='moviesPosters'/>         
                                     </Link>
                                 </div>
-                            )
+                            );
                         })
                     }
                         
                 </div> 
             </div>
         </div>
-    )
-}
+    );
+};
 export default ContentCategory;
