@@ -37,5 +37,5 @@ Para desarrollar este proyecto instalé:(siempre utilizando npm)
 
 Para este proyecto consumí dos APIs locales, las cuales son APIs falsas que desarrollé con node.js, utilizando el paquete json-server. Ambas se inicializan con "npm start". Una de las APIs almacena datos de "usuarios registrados", y la otra guarda información sobre las películas. 
 
-Repositorio de API de Usuarios: https://github.com/SolMoyano1/APIusuarios
-Repositorio de API de Peliculas: https://github.com/SolMoyano1/APImovies
+- Repositorio de API de Usuarios: https://github.com/SolMoyano1/APIusuarios
+- Repositorio de API de Peliculas: https://github.com/SolMoyano1/APImovies
