@@ -1,0 +1,130 @@
+/* LOGOUT STYLES */
+
+/* SMALL */
+@media (min-width:0px) and (max-width:600.99px){
+    .mainDiv{
+        background:linear-gradient(black, rgb(27, 27, 27));
+        min-height: 100vh;
+    }
+
+    .logOutDivContainer{
+        padding: 60px 10px;
+        text-align: center;
+    }
+
+    .logOutTitle{
+        color: white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 26px;
+        text-align: center;
+        margin: 50px 0;
+    }
+    
+    .logOutBtn{
+        background: linear-gradient(rgb(235, 175, 91), rgb(151, 91, 8));
+        color: black;
+        font-weight: bolder;
+        -webkit-text-stroke: 0.3px black;     
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        letter-spacing: 1.3px;
+        width: 60%;
+        border-radius: 10px;
+        border: none;
+        height: 43px;
+        cursor: pointer;
+        margin: 15px 0px;
+    }
+    .logOutBtn:hover{
+        font-size: 15px;
+        height: 44.5px;
+        background: linear-gradient(rgb(235, 175, 91), rgb(170, 102, 8)); 
+    }
+}
+
+/* MEDIUM */
+@media (min-width:601px) and (max-width:1007.99px){
+    .mainDiv{
+        background:linear-gradient(black, rgb(27, 27, 27));
+        min-height: 100vh;
+    }
+
+    .logOutDivContainer{
+        padding: 60px 10px;
+        text-align: center;
+    }
+
+    .logOutTitle{
+        color: white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 26px;
+        text-align: center;
+        margin: 50px 0;
+    }
+    
+    .logOutBtn{
+        background: linear-gradient(rgb(235, 175, 91), rgb(151, 91, 8));
+        color: black;
+        font-weight: bolder;
+        -webkit-text-stroke: 0.3px black;     
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        letter-spacing: 1.3px;
+        width: 30%;
+        border-radius: 10px;
+        border: none;
+        height: 50px;
+        cursor: pointer;
+        margin: 0px 10px;
+    }
+    .logOutBtn:hover{
+        font-size: 16.5px;
+        height: 51.5px;
+        background: linear-gradient(rgb(235, 175, 91), rgb(170, 102, 8)); 
+    }
+}
+
+/* LARGE */
+@media (min-width:1008px) and (max-width:2500px){
+    .mainDiv{
+        background:linear-gradient(black, rgb(27, 27, 27));
+        min-height: 100vh;
+    }
+
+    .logOutDivContainer{
+        padding: 60px 10px;
+        text-align: center;
+    }
+
+    .logOutTitle{
+        color: white;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 32px;
+        text-align: center;
+        margin: 80px 0 90px 0;
+    }
+    
+    .logOutBtn{
+        background: linear-gradient(rgb(235, 175, 91), rgb(151, 91, 8));
+        color: black;
+        font-weight: bolder;
+        -webkit-text-stroke: 0.3px black;     
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 17px;
+        letter-spacing: 1.3px;
+        width: 30%;
+        border-radius: 10px;
+        border: none;
+        height: 50px;
+        cursor: pointer;
+        margin: 0px 10px;
+    }
+
+    .logOutBtn:hover{
+        font-size: 17.5px;
+        height: 51.5px;
+        background: linear-gradient(rgb(235, 175, 91), rgb(170, 102, 8)); 
+    }
+}
+
+   

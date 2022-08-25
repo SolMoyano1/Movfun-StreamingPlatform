@@ -1,8 +1,8 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { Navigate } from 'react-router-dom';
 import '../styles/contentDetails.css';
 import Navbar from './Navbar';
+import { useEffect, useState } from 'react';
+import { Navigate } from 'react-router-dom';
+import axios from 'axios';
 
 function ContentDetails(){
 

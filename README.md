@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Movfun
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Movfun es una aplicacion creada con React JS que simula una plataforma de streaming de películas.
 
-## Available Scripts
+Para utilizar esta aplicación es necesario ingresar a la misma completando el formulario de Log In con el mail y la contraseña (que deben coincidir con los registrados en la API). 
+Luego, se tendrá acceso a la "Home", donde se podrá elegir un género de películas, para luego acceder a un listado de películas del género seleccionado. Al hacer click en alguna de las películas de la lista, se accederá a una página que mostrará el detalle de dicha película.
+Por último, el usuario podrá cerrar su sesión haciendo click en la sección "LogOut" que se encuentra en el Navbar.
 
-In the project directory, you can run:
+## Estructura
 
-### `npm start`
+Dentro de la carpeta "src" creé dos carpetas: una llamada "components", que cotiente los componentes de la aplicación, y otra llamada "styles", que contiene las hojas de estilo aplicadas. 
+Cada componente cuenta con una respectiva hoja de estilos. (Las hojas de estilo cuentan con el mismo nombre que su correspondiente componente, lo que permite una rápida y fácil distinción).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+La aplicación se ejecuta desde "App.js", que es donde están las importaciones de los componentes y los enrutamientos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## APis consumidas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para este proyecto consumí dos APIs locales, las cuales son APIs falsas que desarrollé con node.js, utilizando el paquete json-server. Ambas se inicializan con npm start. Una API almacena datos de "usuarios registrados", y la otra guarda información sobre las películas. 
 
-### `npm run build`
+Repositorio de API de Usuarios: https://github.com/SolMoyano1/APIusuarios
+Repositorio de API de Peliculas: https://github.com/SolMoyano1/APImovies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Dependencias Instaladas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para desarrollar este proyecto instalé:(siempre utilizando npm)
 
-### `npm run eject`
+- Axios($ npm install axios): para hacer llamados a las APIs.
+
+- React Router DOM (npm i react-router-dom): para realizar enrutamientos, hacer redirecciones, e insertar enlaces para navegar por la aplicación.
+
+- React Icons (npm install react-icons --save): para insertar íconos en el Log In.
+I
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

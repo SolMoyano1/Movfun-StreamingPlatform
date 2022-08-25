@@ -1,9 +1,8 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import Navbar from './Navbar';
 import '../styles/contentCategory.css'
+import Navbar from './Navbar';
+import { useEffect, useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import { RiInformationFill } from 'react-icons/ri';
+import axios from 'axios';
 
 
 
@@ -30,7 +29,6 @@ function ContentCategory(){
                 }
                 else if(currentUrl === 'http://localhost:3060/DramaMovies'){
                     setMoviesArray(resolve.data[0].drama);
-                    <p>Drama</p>
                 }
                 else{
                     setMoviesArray(resolve.data[0].action);

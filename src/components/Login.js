@@ -78,7 +78,7 @@ function Login(){
                         <input type='password' name='password' placeholder='  Password' className='loginInputs'/><br/>
                     </label><br/>
                     
-                    <button type='submit' className='loginBtn'>LogIn</button>
+                    <button type='submit' className='loginBtn'>Log In</button>
                 </form>
             </div>
             

@@ -4,8 +4,12 @@ import { Navigate, Link } from "react-router-dom";
 
 function Home(){
 
+    let tokenIsInStorage= sessionStorage.getItem('userToken');
+
     return(
         <div className='mainDiv'>
+
+            {!tokenIsInStorage && <Navigate to='/'/>}
 
             <Navbar/>
             

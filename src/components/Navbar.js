@@ -6,11 +6,10 @@ function Navbar(){
     return(
         <header>
             <nav className='navbar'>
-                <ul className=''>
-                    <li className='sections'>
-                        <Link to='/Home' className='linksNames'>Home</Link>
-                        <Link to='/Contact' className='linksNames'>Contact Us</Link>
-                    </li>
+                <ul className='ulNavbar'>
+                    <h1 className='movfun'>Movfun</h1>
+                    <li className='sections'><Link to='/Home' className='linksNames'>Home</Link></li>
+                    <li className='sections'><Link to='/Logout' className='linksNames'>LogOut</Link></li>                   
                 </ul>
             </nav>
 
